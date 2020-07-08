@@ -1,0 +1,140 @@
+ https://codepen.io/jahteo/pen/VweXBZd
+
+    1. What is Semantic HTML?
+        When all the tags are used to explain what all the chunks of text/imgs are.
+    2. What is HTML used for?
+        Creating the framework of a website. All the building materials.
+    3. What is an attribute and where do we put it?
+        that extra bit of info we put inside a tag,
+    4. What is the h1 tag used for? How many times should I use it on a page?
+        The most important title on the page. use it once. use it well.
+    5. Name two tags that have required attributes
+        <img> & <a>
+    6. What do we put in the head of our HTML document?
+        all the juicy secrets we're telling the browser that we don't want consumers to see.
+    7. What is an id?
+        attribute used primarily for creating reference links on the same page. also used for styling.
+    8. What elements can I add an id to?
+        all of them. except maybe body & head. All the elements in the body for sure.
+    9. How many times can I use the same id on a page?
+        only once in html. but you can refer to it 5 gajillion times in CSS or JS. but not 5 gajillion and one.
+    10. What is a class?
+        atribute used to style
+    11. What elements can I add a class to?
+        also everything.
+    12. How many times can I use the same class on a page?
+        as many times as your sweet heart desires. No really, they're friendly & social. Unlike thos id's.
+    13. How do I get my link to open in a new tab?
+        google it to double check, then add a target="_blank" attribute to the anchor tag.
+    14. What is the alt attribute in the image tag used for?
+        accessibility. It lets folks on readers & with reaaaaaaaly slow connections know what the picture is showing.
+    15. How do I reference an id?
+        #bestIdNameEver
+    16. What is the difference between a section and a div
+        section is semantic, div is purely for styling. both are block elements.
+    17. What is CSS used for?
+        Beautifying that chunk of text. I mean, Styling it.
+    18. How to we select an element? Example - every h2 on the page
+        type it on a new line & throw some curly brackets after it in CSS:
+            h2 {}
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+        id is best used for making those "scroll down to relevant bit when you click me" links. Both can be used for styling, but id will be waaaaay more specific (& take precidence) since it only applies to a single element vs class applying to many.
+        ???Drawing a blank on how to use an example to show the difference...
+    20. How do we select classes in CSS?
+        .thisClassNameIsEvenBetterThanTheIdNameAboveEvenIfItsWaaaayTooLong
+    21. How do we select a p element with a single class of “human””?
+        p.human
+    22. What is a parent child selector? When would this be useful?
+        .human p
+        when you're only picking the p elements within the .human class. helps be specific.
+    23. How do you select all links within a div with the class of sidebar?
+        .sidebar link
+    24. What is a pseudo selector?
+        When you add a special element to a selector that only specifies a certain state.
+        ie: botton:hover
+            ->this is what I was missing in my codepen. le sigh.
+    25. What do we use the change the spacing between lines?
+        line-height:
+    26. What do we use to change the spacing between letters?
+        letter-spacing:
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+        text-transform: uppercase;
+        text-transform: lowercase;
+        text-transform: capitalize;
+    28. How do I add a 1px border around my div that is dotted and black?
+        border: 1px dotted black;
+    29. How do I select everything on the page?
+        *
+    30. How do I write a comment in CSS?
+        /* type here*/
+    31. How do I find out what file I am in, when I am using the command line?
+        pwd
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+        list
+    33. How do I remove a file via the command line? Why do I have to be careful with this?
+        rm   will immedietly & permanently delete it. No undo button
+    34. Why should I use version control?
+        to have options to go back to before I accidentally broke it. & to break big projects into smaller ones.
+    35. How often should I commit to github?
+        As often as possible. Or if you need guidelines every 20 min & after finishing something.
+    36. What is the command we would use to push our repo up to github?
+        git push.
+    37. Walk me through Lambda's git flow.
+        Go to the repo
+        fork it button
+        add TL as a collaborator
+        clone it to my device, use cd & mkdir to navigate into the folder I want it cloned
+            git clone <url>
+            cd <folder just created>
+        open the project w code .
+        git checkout -b 'josh-glantz
+            to create my own branch that I can work on
+        work on the project some, be sure to save it in the editor
+        git status
+        git add .
+            '.' to add all the files that have changes that I'm gonna push
+        git status
+        git commit -m "comment what I've done"
+        git status
+        git push -u origin 'josh-glantz'
+            first time only. thereafter just:
+                git push
+        git status again. (I was taught by a friend who helped me set up git via terminal to check the status between steps to keep reminding me of what I'm doing & to see if there's any odd glitches. Does this actually sound useful/legit?)
+        When finished, we put in a Pull Request
+            Go back to my forked repo in GitHub, click on Branch:Master, select my own name then New Pull Request
+            Change Base Repository to my personal fork
+            Add my Tl (Taja) to reviewers
+            Submit without merging.
+
+
+
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+        Inline elements continue on the same line, whereas a block element will start a new line. In box model jargon, it start a whole new block, like a div does.
+    2. What happens when an element is positioned absolutely?
+        it's positioned in relation to the nearest ancestor element. Ie its position depends on the one most recently above it
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width?
+        put it in a div to give it constrains on the page & then set the width as a percentage.
+        *This is a very awkwardly phrased question to my brain.
+        *another answer could be: img {
+                                        max-width: 100%;
+                                        height: auto;
+                                        }
+    4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+    block: footer, p & div
+    inline: span, link,
+    inline-block: button
+    5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them?
+    box model starts with the content you put in html. That can be text or an image or any blockline element (which is most of them). You can choose to put a border around that element, but you should at least imagine that there's an invisible border regardless. The browser totally does. Inside that border, you can adjust the padding to have more or less space between your content and the border. Outside the border, you're adjusting the margin to have more or less space between your possibly-invisible border & everything around them.
+    To make sure it all fits better, use responsive design (percentages) instead of px.
+
+Stretch Git :
+- [ ] While the processes learned here will set you up to be successful in most situations, they are just the tip of the iceberg in learning Git. Independently research the following topics to learn more about Git.
+  - [ ] Research and understand what a `merge conflict` is and how to resolve it.
+  - [ ] Research the Git commands `pull`, `rebase`, `merge`. These commands will allow you to bring in changes that other developers push to the main branch.
+  - [ ] Research the Git commands `reset `, `revert`, `clean`. These commands will allow you to go back and amends previous commits you have made.
+
+- [x] Research and set up a Graphical User Interface (GUI) Git console.
+
+- [x] Research and setup SSH keys with GitHub, so that you do not need to input your username/password each time you push.  
